@@ -59,9 +59,6 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="_SeedData" />
-    <Folder Include="_Publish" />
-    <Folder Include="_Publish\Scripts" />
     <Folder Include="Production\" />
     <Folder Include="Production\Tables\" />
     <Folder Include="HumanResources\" />
@@ -90,9 +87,9 @@
     <Folder Include="HumanResources\XMLSchemaCollections\" />
     <Folder Include="Production\XMLSchemaCollections\" />
     <Folder Include="Sales\XMLSchemaCollections\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="_Publish\local.publish.xml" />
+    <Folder Include="_SeedData" />
+    <Folder Include="_Publish" />
+    <Folder Include="_Publish\Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Production\Tables\ScrapReason.sql" />
@@ -228,5 +225,8 @@
     <Build Include="Production\XMLSchemaCollections\ProductDescriptionSchemaCollection.sql" />
     <Build Include="Sales\XMLSchemaCollections\StoreSurveySchemaCollection.sql" />
     <Build Include="ExtendedProperties.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="local.publish.xml" />
   </ItemGroup>
 </Project>
