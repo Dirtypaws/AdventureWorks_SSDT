@@ -226,7 +226,4 @@
     <Build Include="Sales\XMLSchemaCollections\StoreSurveySchemaCollection.sql" />
     <Build Include="ExtendedProperties.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="local.publish.xml" />
-  </ItemGroup>
 </Project>

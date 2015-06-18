@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AdventureWorks", "AdventureWorks\AdventureWorks.sqlproj", "{CE13AE85-F907-4EEB-8E87-AA327FA6493B}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AdventureWorks", "DATA\AdventureWorks\AdventureWorks.sqlproj", "{CE13AE85-F907-4EEB-8E87-AA327FA6493B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
