@@ -22,12 +22,12 @@ BEGIN
       
 
             --FREETEXTTABLE case as inflectional and Thesaurus were required
-      IF @useThesaurus = 1 AND @useInflectional = 1  
-        BEGIN
-                  SELECT FT_TBL.[JobCandidateID], KEY_TBL.[RANK] FROM [HumanResources].[JobCandidate] AS FT_TBL 
-                        INNER JOIN FREETEXTTABLE([HumanResources].[JobCandidate],*, @searchString,LANGUAGE @language) AS KEY_TBL
-                   ON  FT_TBL.[JobCandidateID] =KEY_TBL.[KEY]
-            END
+      --IF @useThesaurus = 1 AND @useInflectional = 1  
+      --  BEGIN
+      --            SELECT FT_TBL.[JobCandidateID], KEY_TBL.[RANK] FROM [HumanResources].[JobCandidate] AS FT_TBL 
+      --                  INNER JOIN FREETEXTTABLE([HumanResources].[JobCandidate],*, @searchString,LANGUAGE @language) AS KEY_TBL
+      --             ON  FT_TBL.[JobCandidateID] =KEY_TBL.[KEY]
+      --      END
 
       ELSE IF @useThesaurus = 1
             BEGIN

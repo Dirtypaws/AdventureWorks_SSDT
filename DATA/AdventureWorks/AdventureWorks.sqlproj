@@ -25,6 +25,7 @@
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
     <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <EnableFullTextSearch>False</EnableFullTextSearch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -91,6 +92,7 @@
     <Folder Include="_Publish" />
     <Folder Include="_Publish\Scripts" />
     <Folder Include="_SeedData\dbo" />
+    <Folder Include="_SeedData\Person" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Production\Tables\ScrapReason.sql" />
@@ -184,8 +186,6 @@
     <Build Include="Sales\Views\vSalesPersonSalesByFiscalYears.sql" />
     <Build Include="Person\Views\vStateProvinceCountryRegion.sql" />
     <Build Include="Sales\Views\vStoreWithDemographics.sql" />
-    <Build Include="Storage\AW2014FullTextCatalog.sql" />
-    <Build Include="FullTextIndexes.sql" />
     <Build Include="dbo\Functions\ufnGetAccountingStartDate.sql" />
     <Build Include="dbo\Functions\ufnGetAccountingEndDate.sql" />
     <Build Include="dbo\Functions\ufnGetProductDealerPrice.sql" />
@@ -206,7 +206,6 @@
     <Build Include="dbo\Stored Procedures\uspPrintError.sql" />
     <Build Include="HumanResources\Stored Procedures\uspUpdateEmployeePersonalInfo.sql" />
     <Build Include="dbo\Stored Procedures\uspLogError.sql" />
-    <Build Include="dbo\Stored Procedures\uspSearchCandidateResumes.sql" />
     <Build Include="Database Triggers\ddlDatabaseTriggerLog.sql" />
     <Build Include="dbo\User Defined Types\AccountNumber.sql" />
     <Build Include="dbo\User Defined Types\Flag.sql" />
@@ -232,6 +231,8 @@
     <None Include="_SeedData\dbo\AWBuildVersions.sql" />
     <None Include="_Publish\Scripts\Release.PreDeployment.sql" />
     <None Include="_Publish\Scripts\Release.PostDeployment.sql" />
+    <None Include="_SeedData\Person\BusinessEntities.sql" />
+    <None Include="_SeedData\Person\Persons.sql" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="PreDeployment.sql" />

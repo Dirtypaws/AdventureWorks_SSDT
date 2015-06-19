@@ -9,3 +9,7 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
+
+
+:r _SeedData/dbo/AWBuildVersions.sql
+:r _SeedData/Person/BusinessEntities.sql

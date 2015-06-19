@@ -7,7 +7,6 @@ USING ( VALUES
 	ON [t].[SystemInformationID] = [s].[SystemInformationID]
 WHEN MATCHED AND (s.[SystemInformationID] <> t.[SystemInformationID]) THEN
 	UPDATE SET
-		[SystemInformationID] = [s].[SystemInformationID], 
 		[Database Version] = [s].[Database Version], 
 		[VersionDate] = [s].[VersionDate], 
 		[ModifiedDate] = [s].[ModifiedDate]
