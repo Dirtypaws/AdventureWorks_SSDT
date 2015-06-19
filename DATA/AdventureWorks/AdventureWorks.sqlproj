@@ -90,6 +90,7 @@
     <Folder Include="_SeedData" />
     <Folder Include="_Publish" />
     <Folder Include="_Publish\Scripts" />
+    <Folder Include="_SeedData\dbo" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Production\Tables\ScrapReason.sql" />
@@ -225,5 +226,9 @@
     <Build Include="Production\XMLSchemaCollections\ProductDescriptionSchemaCollection.sql" />
     <Build Include="Sales\XMLSchemaCollections\StoreSurveySchemaCollection.sql" />
     <Build Include="ExtendedProperties.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Publish\LOCAL.publish.xml" />
+    <None Include="_SeedData\dbo\AWBuildVersions.sql" />
   </ItemGroup>
 </Project>
