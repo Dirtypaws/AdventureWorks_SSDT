@@ -233,15 +233,18 @@
     <None Include="_Publish\Scripts\Release.PreDeployment.sql" />
     <None Include="_Publish\Scripts\Release.PostDeployment.sql" />
   </ItemGroup>
-  
-  
   <ItemGroup>
     <PreDeploy Include="PreDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />
   </ItemGroup>
-  
+  <ItemGroup>
+    <SqlCmdVariable Include="MyVar">
+      <DefaultValue>0</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
   <!--   
   <ItemGroup Condition="'$(Configuration)' == 'Debug'">
     <PreDeploy Include="Script.PreDeployment.sql" />
