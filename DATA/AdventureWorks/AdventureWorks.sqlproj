@@ -230,5 +230,35 @@
   <ItemGroup>
     <None Include="_Publish\LOCAL.publish.xml" />
     <None Include="_SeedData\dbo\AWBuildVersions.sql" />
+    <None Include="_Publish\Scripts\Release.PreDeployment.sql" />
+    <None Include="_Publish\Scripts\Release.PostDeployment.sql" />
   </ItemGroup>
+  
+  
+  <ItemGroup>
+    <PreDeploy Include="PreDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostDeployment.sql" />
+  </ItemGroup>
+  
+  <!--   
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <PreDeploy Include="Script.PreDeployment.sql" />
+    <None Include="_Publish\Scripts\Release.PreDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <PostDeploy Include="Script.PostDeployment.sql" />
+    <None Include="_Publish\Scripts\Release.PostDeployment.sql" />
+  </ItemGroup>
+  
+    <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <PostDeploy Include="_Publish\Scripts\Release.PostDeployment.sql" />
+    <None Include="Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <PreDeploy Include="_Publish\Scripts\Release.PreDeployment.sql" />
+    <None Include="Script.PreDeployment.sql" />
+  </ItemGroup>  
+  -->
 </Project>
