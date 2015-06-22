@@ -21,8 +21,6 @@ To Reproduce:
 
 The ordering in PostDeployment.sql has been switched. The BusinessEntities need to be inserted before the Persons.sql because of a foreign key reference
 
-- Open the dbo/Tables/AWBuildVersion.sql
-- Add the identity column back:
 ```SQL
 :r _SeedData/dbo/AWBuildVersions.sql
 :r _SeedData/Person/Persons.sql
