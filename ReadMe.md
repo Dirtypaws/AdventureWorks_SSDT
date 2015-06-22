@@ -2,26 +2,34 @@
 ## Overview
 This is an example of a simple web project that uses SSDT as it's database VCS
 
-### Excercise #1
+### Excercise #2
 
-This excercise will have you solve the issue of missing [Person].[Person] data.
+This excercise will have you solve a model issue with the [dbo].[AWBuildversion] table
 
 #### Description
 
-The [Person].[Person] table doesn't have any data. Even though the _SeedData script exists
+The [dbo].[AWBuildversion] _SeedData script is causing an error when I try to deploy
 
 To Reproduce:
-> - Deploy the database to your local server
-> - Observe that there is no data in the [Person].[Person] table
+> - Build AdventureWorks.sqlproj
+> - Deploy AdventureWorks.sqlproj to your local database server
+> - Observe the following error:
+>
+> Table 'dbo.AWBuildVersion' does not have the identity property. Cannot perform SET operation.
+> (17233,0): SQL72045: Script execution error.
 
 #### Solution
 
-The PostDeployment.sql script is not referencing the _SeedData/Person/Persons table
+Someone has checked in a change that took off the identity column on the [dbo].[AWBuildversion]. The _SeedData script attempts to set identity insert on, and causes an error when deploying, but, not building.
 
-Add a reference to the post deployment script:
-
+- Open the dbo/Tables/AWBuildVersion.sql
+- Add the identity column back:
 ```SQL
-:r _SeedData/dbo/AWBuildVersions.sql
-:r _SeedData/Person/BusinessEntities.sql
-:r _SeedData/Person/Persons.sql
+CREATE TABLE [dbo].[AWBuildVersion] (
+    [SystemInformationID] TINYINT       IDENTITY(1, 1) NOT NULL,
+    [Database Version]    NVARCHAR (25) NOT NULL,
+    [VersionDate]         DATETIME      NOT NULL,
+    [ModifiedDate]        DATETIME      CONSTRAINT [DF_AWBuildVersion_ModifiedDate] DEFAULT (getdate()) NOT NULL,
+    CONSTRAINT [PK_AWBuildVersion_SystemInformationID] PRIMARY KEY CLUSTERED ([SystemInformationID] ASC)
+);
 ```
