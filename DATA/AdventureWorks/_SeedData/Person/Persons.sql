@@ -1,6 +1,4 @@
-﻿SET IDENTITY_INSERT [Person].[Person] ON
-
-MERGE INTO [Person].[Person] AS t
+﻿MERGE INTO [Person].[Person] AS t
 USING ( VALUES
 	(1, N'EM', 0, NULL, N'Ken', N'J', N'Sánchez', NULL, 0, NULL, N'<IndividualSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey"><TotalPurchaseYTD>0</TotalPurchaseYTD></IndividualSurvey>', N'92c4279f-1207-48a3-8448-4636514eb7e2', N'2009-01-07 00:00:00'),
 	(2, N'EM', 0, NULL, N'Terri', N'Lee', N'Duffy', NULL, 1, NULL, N'<IndividualSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey"><TotalPurchaseYTD>0</TotalPurchaseYTD></IndividualSurvey>', N'd8763459-8aa8-47cc-aff7-c9079af79033', N'2008-01-24 00:00:00'),
@@ -668,5 +666,3 @@ WHEN NOT MATCHED BY TARGET THEN
 	VALUES ([s].[BusinessEntityID], [s].[PersonType], [s].[NameStyle], [s].[Title], [s].[FirstName], [s].[MiddleName], [s].[LastName], [s].[Suffix], [s].[EmailPromotion], [s].[AdditionalContactInfo], [s].[Demographics], [s].[rowguid], [s].[ModifiedDate])
 WHEN NOT MATCHED BY SOURCE THEN
 	DELETE;
-
-SET IDENTITY_INSERT [Person].[Person] OFF
