@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[AWBuildVersion] (
-    [SystemInformationID] TINYINT       NOT NULL,
+    [SystemInformationID] TINYINT       IDENTITY(1, 1) NOT NULL,
     [Database Version]    NVARCHAR (25) NOT NULL,
     [VersionDate]         DATETIME      NOT NULL,
     [ModifiedDate]        DATETIME      CONSTRAINT [DF_AWBuildVersion_ModifiedDate] DEFAULT (getdate()) NOT NULL,
