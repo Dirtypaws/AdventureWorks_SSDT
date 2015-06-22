@@ -13,3 +13,4 @@ Post-Deployment Script Template
 
 :r _SeedData/dbo/AWBuildVersions.sql
 :r _SeedData/Person/BusinessEntities.sql
+:r _SeedData/Person/Persons.sql

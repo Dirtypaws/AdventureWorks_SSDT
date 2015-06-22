@@ -1,0 +1,13 @@
+﻿@model List<Person>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <ul>
+        @foreach (Person p in @Model)
+        {
+            <li>@string.Format("{0} {1}", p.FirstName, p.LastName)</li>
+        }
+    </ul>
+</div>

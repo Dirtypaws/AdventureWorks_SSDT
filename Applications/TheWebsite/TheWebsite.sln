@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{F0345595-DE51-4284-A43B-E27B9D9D7538}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DATA", "DATA", "{92C4379E-F9AD-4D74-A72C-ED3F31C6FA33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Other Projects", "Other Projects", "{AD7B8042-52E3-4E8E-9803-F3A83C14B02C}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AdventureWorks", "..\..\DATA\AdventureWorks\AdventureWorks.sqlproj", "{CE13AE85-F907-4EEB-8E87-AA327FA6493B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks", "AdventureWorks\AdventureWorks.csproj", "{DCF92F96-9D96-494D-8BA3-90FA0D482BC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE13AE85-F907-4EEB-8E87-AA327FA6493B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE13AE85-F907-4EEB-8E87-AA327FA6493B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE13AE85-F907-4EEB-8E87-AA327FA6493B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CE13AE85-F907-4EEB-8E87-AA327FA6493B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE13AE85-F907-4EEB-8E87-AA327FA6493B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE13AE85-F907-4EEB-8E87-AA327FA6493B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DCF92F96-9D96-494D-8BA3-90FA0D482BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF92F96-9D96-494D-8BA3-90FA0D482BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF92F96-9D96-494D-8BA3-90FA0D482BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF92F96-9D96-494D-8BA3-90FA0D482BC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CE13AE85-F907-4EEB-8E87-AA327FA6493B} = {92C4379E-F9AD-4D74-A72C-ED3F31C6FA33}
+		{DCF92F96-9D96-494D-8BA3-90FA0D482BC4} = {F0345595-DE51-4284-A43B-E27B9D9D7538}
+	EndGlobalSection
+EndGlobal
