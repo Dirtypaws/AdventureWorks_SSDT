@@ -3,11 +3,34 @@
     ViewBag.Title = "Home Page";
 }
 
-<div>
+<div class="col-md-6">
     <ul>
         @foreach (Person p in @Model)
         {
             <li>@string.Format("{0} {1}", p.FirstName, p.LastName)</li>
         }
     </ul>
+</div>
+
+<div class="col-md-6">
+    <input id="btn_reseed" type="button" class="btn btn-danger" value="Reseed names"/>
+    
+    <script>
+        $(document).ready(function() {
+            $("#btn_reseed").click(function() {
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: _rootUrl + "Lookup/GetStrategies?fundUnitID=" + fundUnitID
+                })
+                .done(function (data) {
+                    $("#ddl_strategy").select2({
+                        placeholder: "select a strategy",
+                        allowClear: false,
+                        data: data
+                    });
+                });
+            })
+        })
+    </script>
 </div>
